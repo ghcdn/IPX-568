@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hls player| IPX-568 </title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+    <div id="movie" align="center">
+        <video id="video"  width=80% height="500" controls poster="https://cdn.jsdelivr.net/gh/ghcdn/IPX-568/pic0.jpg"></video>
+        <p>IPX-568 恋人の女上司と精子枯れ果てるまで情熱的な絶倫SEXしまくった日々。 【大人気シリーズ第2弾】 「すっぴんでHもあるよ…」 岬ななみ</p>
+        <script>
+        var video = document.getElementById('video');
+        var videoSrc = 'https://cdn.jsdelivr.net/gh/ghcdn/IPX-568/res/index.m3u8';
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        }
+        </script>
+    </div>
+</body>
+
+</html>
